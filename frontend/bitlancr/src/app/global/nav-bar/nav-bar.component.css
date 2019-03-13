@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  .header-space {
+    width: auto;
+  }
+}
+
+.header-title {
+  padding-left: 8px;
+  font-weight: 600 !important;
+}
+
+.nav-item {
+  width: auto !important;
+  padding-left: 12px;
+}
+
+#search_input {
+  padding-left: 10px;
+}
