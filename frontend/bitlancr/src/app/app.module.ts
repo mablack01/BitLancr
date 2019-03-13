@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './global/nav-bar/nav-bar.component';
+import { PreviewComponent } from './bids/dashboard/preview/preview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
