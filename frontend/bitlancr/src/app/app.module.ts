@@ -8,13 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './global/nav-bar/nav-bar.component';
 import { BidPreviewComponent } from './bids/dashboard/preview/preview.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PreviewComponent } from './contracts/dashboard/preview/preview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     BidPreviewComponent,
-    DashboardComponent
+    DashboardComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
