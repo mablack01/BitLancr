@@ -1,5 +1,5 @@
 .dash-card {
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid;
   margin: 14px 12px;
   height: auto;
@@ -28,6 +28,11 @@
   }
 }
 
+.dash-card-info {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .dash-card-title-section {
   border-right: 2px dashed;
   text-align: center;
@@ -39,6 +44,8 @@
 }
 
 .dash-card-info > img {
+  border-left: 2px solid;
+  border-radius: 0px 13px 13px 0px;
   object-fit: cover;
   width: 100%;
   max-height: 100%;
