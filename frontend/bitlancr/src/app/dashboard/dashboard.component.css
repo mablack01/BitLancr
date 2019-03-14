@@ -1,0 +1,16 @@
+.dash-card {
+  border-radius: 25px;
+  border: 2px solid;
+  margin: 14px 2px;
+  height: auto;
+}
+
+.dash-card-title-section {
+  border-right: 2px dashed;
+  text-align: center;
+}
+
+.dash-card-sub-title {
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
