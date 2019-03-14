@@ -14,12 +14,14 @@ export class BidPreviewComponent implements OnInit {
     this.mockData[1] = {
       title: "Web App",
       yourBid: 5000,
-      lowestBid: 4000
+      lowestBid: 4000,
+      daysLeft: 5
     };
     this.mockData[2] = {
       title: "Java Program",
       yourBid: 25,
-      lowestBid: 25
+      lowestBid: 25,
+      daysLeft: 2
     };
   }
 
