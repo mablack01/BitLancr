@@ -26,6 +26,14 @@ export class BidPreviewComponent implements OnInit {
   ngOnInit() {
   }
 
+  cancel() {
+    alert("You have canceled bid " + this.id + ".");
+  }
+
+  modify() {
+    alert("You have modified bid " + this.id + ".");
+  }
+
   formatMoney(n) {
     return "$" + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }

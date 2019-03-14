@@ -1,13 +1,31 @@
 .dash-card {
   border-radius: 25px;
   border: 2px solid;
-  margin: 14px 2px;
+  margin: 14px 12px;
   height: auto;
   transition: all .2s ease-in-out;
 }
 
 .dash-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+.dash-card-icon {
+  display: inline-block;
+  text-align: center;
+}
+
+.dash-card-content {
+  border-right: 2px dashed;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width:1025px) {
+  .dash-card-content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 .dash-card-title-section {
