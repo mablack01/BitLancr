@@ -13,8 +13,8 @@ export class BidPreviewComponent implements OnInit {
   constructor() {
     this.mockData[1] = {
       title: "Web App",
-      yourBid: 500,
-      lowestBid: 400
+      yourBid: 5000,
+      lowestBid: 4000
     };
     this.mockData[2] = {
       title: "Java Program",
@@ -24,6 +24,10 @@ export class BidPreviewComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  formatMoney(n) {
+    return "$" + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
 }

@@ -1,8 +1,8 @@
 <div class="clr-row dash-card">
     <div class="clr-col-4 dash-card-title-section">
       <h4>{{ mockData[id].title }}</h4>
-      <p class="dash-card-sub-title">Your Bid: <br/>
-        Lowest Bid:
+      <p class="dash-card-sub-title">Your Bid: {{ formatMoney(mockData[id].yourBid) }}<br/>
+        Lowest Bid: {{ formatMoney(mockData[id].lowestBid) }}
       </p>
     </div>
     <div class="clr-col-6 dash-card-content">

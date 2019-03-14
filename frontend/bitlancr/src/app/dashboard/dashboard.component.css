@@ -3,6 +3,11 @@
   border: 2px solid;
   margin: 14px 2px;
   height: auto;
+  transition: all .2s ease-in-out;
+}
+
+.dash-card:hover {
+  transform: scale(1.05);
 }
 
 .dash-card-title-section {
