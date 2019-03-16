@@ -1,5 +1,20 @@
 <div class="clr-row" *ngFor="let row of contracts">
-  <div class="clr-col-3" *ngFor="let contract of row?.data">
-    <p>heyyyyy boi</p>
+  <div class="clr-col-md-3" *ngFor="let contract of row?.data">
+    <div class="card recommended-card">
+      <div class="card-img recommended-logo">
+        <img [src]="contract.imgUrl" [alt]="contract.title">
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{ contract.title }}</h4>
+        <p class="card-text recommended-text">
+          Average Bid: {{ formatMoney(contract.avgBid) }}<br />
+          Skills: <span *ngFor="let skill of contract.skills"><img class="recommended-skill" src="assets/skills/{{ skill }}.png" /></span>
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="..." class="btn btn-sm btn-link">Place Bid</a>
+        <a href="..." class="btn btn-sm btn-link">More Information</a>
+      </div>
+    </div>
   </div>
 </div>
