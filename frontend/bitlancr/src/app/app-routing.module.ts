@@ -3,13 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: '**', component: DashboardComponent } //later we can add a 404
+	{ path: '', component: DashboardComponent },
+	{ path: 'dashboard', component: DashboardComponent },
+	{ path: '**', component: DashboardComponent } //later we can add a 404
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }

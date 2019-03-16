@@ -1,38 +1,38 @@
 <header class="header-6 header">
-    <div class="branding header-space">
-        <a href="..." class="nav-link">
-            <i class="fas fa-code fa-lg white" style="color: white"></i>
-            &nbsp;&nbsp;
-            <span class="title header-title">ByteLancr</span>
-        </a>
-    </div>
-    <form class="search">
-        <label for="search_input">
-            <input id="search_input" type="text" placeholder="Search for keywords...">
-        </label>
-    </form>
-    <div class="header-actions">
-        <a href="/" class="nav-item nav-link nav-icon">
-            <i class="fas fa-home fa-md"></i>&nbsp;&nbsp;<span *ngIf="!isMobile">Dashboard</span>
-        </a>
-        <a href="/support" class="nav-item nav-link nav-icon">
-            <i class="far fa-life-ring fa-md"></i>&nbsp;&nbsp;<span *ngIf="!isMobile">Support</span>
-        </a>
-        <clr-dropdown>
-            <button class="nav-text" clrDropdownTrigger>
-                <span *ngIf="!isMobile">Miles Black &nbsp;&nbsp;
-                  <i class="fas fa-chevron-down fa-sm"></i>
-                </span>
-                <span *ngIf="isMobile">
-                  <i class="fas fa-user fa-md nav-item nav-link nav-icon"></i>
-                </span>
-            </button>
-            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-                <a href="/profile" clrDropdownItem>Profile</a>
-                <a href="/inbox" clrDropdownItem>Inbox</a>
-                <a href="/jobs" clrDropdownItem>Jobs</a>
-                <a href="/settings" clrDropdownItem>Settings</a>
-            </clr-dropdown-menu>
-        </clr-dropdown>
-    </div>
+  <div class="branding header-space">
+    <a href="..." class="nav-link">
+      <i class="fas fa-code fa-lg white" style="color: white"></i>
+      &nbsp;&nbsp;
+      <span class="title header-title">ByteLancr</span>
+    </a>
+  </div>
+  <form class="search">
+    <label for="search_input">
+      <input id="search_input" type="text" placeholder="Search for keywords...">
+    </label>
+  </form>
+  <div class="header-actions">
+    <a href="/" class="nav-item nav-link nav-icon">
+      <i class="fas fa-home fa-md"></i>&nbsp;&nbsp;<span *ngIf="!isMobile">Dashboard</span>
+    </a>
+    <a href="/support" class="nav-item nav-link nav-icon">
+      <i class="far fa-life-ring fa-md"></i>&nbsp;&nbsp;<span *ngIf="!isMobile">Support</span>
+    </a>
+    <clr-dropdown>
+      <button class="nav-text" clrDropdownTrigger>
+        <span *ngIf="!isMobile">Miles Black &nbsp;&nbsp;
+          <i class="fas fa-chevron-down fa-sm"></i>
+        </span>
+        <span *ngIf="isMobile">
+          <i class="fas fa-user fa-md nav-item nav-link nav-icon"></i>
+        </span>
+      </button>
+      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+        <a href="/profile" clrDropdownItem>Profile</a>
+        <a href="/inbox" clrDropdownItem>Inbox</a>
+        <a href="/jobs" clrDropdownItem>Jobs</a>
+        <a href="/settings" clrDropdownItem>Settings</a>
+      </clr-dropdown-menu>
+    </clr-dropdown>
+  </div>
 </header>

@@ -1,22 +1,22 @@
 <div class="clr-row dash-card">
-    <div class="clr-col-4 dash-card-title-section">
-      <h4>{{ mockData[id].title }}</h4>
-      <p class="dash-card-sub-title">Your Bid: {{ formatMoney(mockData[id].yourBid) }}<br/>
-        Lowest Bid: {{ formatMoney(mockData[id].lowestBid) }}
-      </p>
-    </div>
-    <div class="clr-col-6 dash-card-content">
-      <span class="dash-card-icon" (click)="cancel()">
-        <i class="fas fa-ban fa-5x"></i>
-        <br/>Cancel
-      </span>
-      <span class="dash-card-icon" (click)="modify()">
-        <i class="fas fa-cog fa-5x"></i>
-        <br/>Modify
-      </span>
-    </div>
-    <div class="clr-col-2 dash-card-day">
-      <p class="dash-card-day-number">{{ mockData[id].daysLeft }}</p>
-      <p>Days Left</p>
-    </div>
+  <div class="clr-col-4 dash-card-title-section">
+    <h4>{{ mockData[id].title }}</h4>
+    <p class="dash-card-sub-title">Your Bid: {{ formatMoney(mockData[id].yourBid) }}<br />
+      Lowest Bid: {{ formatMoney(mockData[id].lowestBid) }}
+    </p>
+  </div>
+  <div class="clr-col-6 dash-card-content">
+    <span class="dash-card-icon" (click)="cancel()">
+      <i class="fas fa-ban fa-5x"></i>
+      <br />Cancel
+    </span>
+    <span class="dash-card-icon" (click)="modify()">
+      <i class="fas fa-cog fa-5x"></i>
+      <br />Modify
+    </span>
+  </div>
+  <div class="clr-col-2 dash-card-day">
+    <p class="dash-card-day-number">{{ mockData[id].daysLeft }}</p>
+    <p>Days Left</p>
+  </div>
 </div>
