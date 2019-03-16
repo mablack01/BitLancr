@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PreviewComponent } from './preview.component';
+import { ContractPreviewComponent } from './preview.component';
 
-describe('PreviewComponent', () => {
-  let component: PreviewComponent;
-  let fixture: ComponentFixture<PreviewComponent>;
+describe('ContractPreviewComponent', () => {
+  let component: ContractPreviewComponent;
+  let fixture: ComponentFixture<ContractPreviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PreviewComponent ]
+      declarations: [ ContractPreviewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PreviewComponent);
+    fixture = TestBed.createComponent(ContractPreviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
