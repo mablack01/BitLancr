@@ -9,15 +9,68 @@ export class DashboardComponent implements OnInit {
 
 	//We can find this out through a JWT session, hard coded for now.
 	isDeveloper = false;
-	contractIndex = 0;
-	contractLength = 0;
+	openBids = [];
+	contractPostingIndex = 0;
+	contractPostingLength = 0;
+	contractPostings = [];
+	currentContractIndex = 0;
+	currentContractLength = 0;
 	currentContracts = [];
 
 	constructor() {
+		if (this.isDeveloper) {
+			this.loadOpenBids();
+		} else {
+			this.loadContractPostings();
+		}
 		this.loadCurrentContracts();
 	}
 
 	ngOnInit() {
+	}
+
+	loadOpenBids() {
+		//Insert http request to get current contracts.
+		//Using mock data for now till the backend is setup.
+		this.openBids[0] = {
+			title: "Web App",
+			yourBid: 5000,
+			lowestBid: 4000,
+			daysLeft: 5
+		};
+		this.openBids[1] = {
+			title: "Java Program",
+			yourBid: 25,
+			lowestBid: 25,
+			daysLeft: 2
+		};
+	}
+
+	loadContractPostings() {
+		//Insert http request to get current contracts.
+		//Using mock data for now till the backend is setup.
+		this.contractPostings[0] = {
+			title: "Front End Dev",
+			numBid: 23,
+			avgBid: 54,
+			lowestBid: 48,
+			imgSrc: "assets/companies/company1.png"
+		};
+		this.contractPostings[1] = {
+			title: "Back End Dev",
+			numBid: 3,
+			avgBid: 28,
+			lowestBid: 26,
+			imgSrc: "assets/companies/company1.png"
+		};
+		this.contractPostings[2] = {
+			title: "Database Engineer",
+			numBid: 14,
+			avgBid: 52,
+			lowestBid: 52,
+			imgSrc: "assets/companies/company1.png"
+		};
+		this.contractPostingLength = this.contractPostings.length;
 	}
 
 	loadCurrentContracts() {
@@ -38,35 +91,63 @@ export class DashboardComponent implements OnInit {
 			nextSprint: "March 25, 2019",
 			imgSrc: "assets/companies/bbb.png"
 		};
-		this.contractLength = this.currentContracts.length;
+		this.currentContractLength = this.currentContracts.length;
 	}
 
-	getContract(item: Number) {
+	getContract(currentContracts: Boolean, item: Number) {
 		if (item == 1) {
-			return this.currentContracts[this.contractIndex];
+			if (currentContracts) {
+				return this.currentContracts[this.currentContractIndex];
+			} else {
+				return this.contractPostings[this.contractPostingIndex];
+			}
 		} else {
-			let nextIndex = this.contractIndex + 1;
-			if (nextIndex >= this.contractLength) {
+			if (currentContracts) {
+				let nextIndex = this.currentContractIndex + 1;
+				if (nextIndex >= this.currentContractLength) {
+					nextIndex = 0;
+				}
+				return this.currentContracts[nextIndex];
+			} else {
+				let nextIndex = this.contractPostingIndex + 1;
+				if (nextIndex >= this.contractPostingLength) {
+					nextIndex = 0;
+				}
+				return this.contractPostings[nextIndex];
+			}
+		}
+	}
+
+	decreaseIndex(currentContracts: Boolean) {
+		if (currentContracts) {
+			let nextIndex = this.currentContractIndex - 1;
+			if (nextIndex < 0) {
+				nextIndex = this.currentContractLength - 1;
+			}
+			this.currentContractIndex = nextIndex;
+		} else {
+			let nextIndex = this.contractPostingIndex - 1;
+			if (nextIndex < 0) {
+				nextIndex = this.contractPostingLength - 1;
+			}
+			this.contractPostingIndex = nextIndex;
+		}
+	}
+
+	increaseIndex(currentContracts: Boolean) {
+		if (currentContracts) {
+			let nextIndex = this.currentContractIndex + 1;
+			if (nextIndex >= this.currentContractLength) {
 				nextIndex = 0;
 			}
-			return this.currentContracts[nextIndex];
+			this.currentContractIndex = nextIndex;
+		} else {
+			let nextIndex = this.contractPostingIndex + 1;
+			if (nextIndex >= this.contractPostingLength) {
+				nextIndex = 0;
+			}
+			this.contractPostingIndex = nextIndex;
 		}
-	}
-
-	decreaseIndex() {
-		let nextIndex = this.contractIndex - 1;
-		if (nextIndex < 0) {
-			nextIndex = this.contractLength - 1;
-		}
-		this.contractIndex = nextIndex;
-	}
-
-	increaseIndex() {
-		let nextIndex = this.contractIndex + 1;
-		if (nextIndex >= this.contractLength) {
-			nextIndex = 0;
-		}
-		this.contractIndex = nextIndex;
 	}
 
 }

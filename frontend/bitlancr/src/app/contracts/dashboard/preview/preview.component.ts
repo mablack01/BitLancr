@@ -7,7 +7,11 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class ContractPreviewComponent implements OnInit {
 
-	@Input() contract = {};
+	@Input() contract = {
+		title: String,
+		nextSprint: String,
+		imgSrc: String
+	};
 	mockData = [];
 
 	constructor() {

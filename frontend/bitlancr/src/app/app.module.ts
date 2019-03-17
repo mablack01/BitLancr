@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContractPreviewComponent } from './contracts/dashboard/preview/preview.component';
 import { RecommendedContractComponent } from './contracts/dashboard/recommended-contract/recommended-contract.component';
 import { RecommendedDeveloperComponent } from './developers/dashboard/recommended-developer/recommended-developer.component';
+import { PostingComponent } from './contracts/dashboard/posting/posting.component';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,8 @@ import { RecommendedDeveloperComponent } from './developers/dashboard/recommende
 		DashboardComponent,
 		ContractPreviewComponent,
 		RecommendedContractComponent,
-		RecommendedDeveloperComponent
+		RecommendedDeveloperComponent,
+		PostingComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,0 +1,14 @@
+<div class="clr-row dash-card">
+  <div class="clr-col-4 dash-card-title-section">
+    <h4>{{ contract.title }}</h4>
+  </div>
+  <div class="clr-col-6 dash-card-content">
+    <p>Number of Bids: {{ contract.numBid }}<br />
+      Average Bid: {{ formatMoney(contract.avgBid) }}<br />
+      Lowest Bid: {{ formatMoney(contract.lowestBid) }}<br />
+    </p>
+  </div>
+  <div class="clr-col-2 dash-card-info">
+    <img [src]="contract.imgSrc" />
+  </div>
+</div>
