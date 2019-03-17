@@ -78,3 +78,16 @@
   max-height: 30px;
   padding-right: 5px;
 }
+
+.scroll-section {
+  position: relative;
+}
+
+.scroll-icon {
+  position: absolute;
+  top: 40%;
+}
+
+.scroll-icon:hover {
+  color: #002538;
+}

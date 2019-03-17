@@ -4,19 +4,19 @@
       <h2>Open Bids</h2>
       <div class="clr-row">
         <div class="clr-col-md">
-          <bid-preview [id]=1></bid-preview>
+          <bid-preview [bid]="openBids[0]"></bid-preview>
         </div>
         <div class="clr-col-md">
-          <bid-preview [id]=2></bid-preview>
+          <bid-preview [bid]="openBids[1]"></bid-preview>
         </div>
       </div>
       <h2>Current Contracts</h2>
       <div class="clr-row">
         <div class="clr-col-md">
-          <contract-preview [id]=1></contract-preview>
+          <contract-preview [contract]="getContract(1)"></contract-preview>
         </div>
         <div class="clr-col-md">
-          <contract-preview [id]=2></contract-preview>
+          <contract-preview [contract]="getContract(2)"></contract-preview>
         </div>
       </div>
       <h2>Recommended Contracts</h2>
@@ -24,22 +24,26 @@
     </div>
     <div class="content-area" *ngIf="!isDeveloper">
       <h2>Contract Postings</h2>
-      <div class="clr-row">
+      <div class="clr-row scroll-section">
+        <i class="fas fa-caret-left fa-2x scroll-icon" style="left: 0px;" (click)="decreaseIndex(false)"></i>
         <div class="clr-col-md">
-          <bid-preview [id]=1></bid-preview>
+          <contract-posting [contract]="getContract(false, 1)"></contract-posting>
         </div>
         <div class="clr-col-md">
-          <bid-preview [id]=2></bid-preview>
+          <contract-posting [contract]="getContract(false, 2)"></contract-posting>
         </div>
+        <i class="fas fa-caret-right fa-2x scroll-icon" style="right: 0px;" (click)="increaseIndex(false)"></i>
       </div>
       <h2>Current Contracts</h2>
-      <div class="clr-row">
+      <div class="clr-row scroll-section">
+        <i class="fas fa-caret-left fa-2x scroll-icon" style="left: 0px;" (click)="decreaseIndex(true)"></i>
         <div class="clr-col-md">
-          <contract-preview [id]=1></contract-preview>
+          <contract-preview [contract]="getContract(true, 1)"></contract-preview>
         </div>
         <div class="clr-col-md">
-          <contract-preview [id]=2></contract-preview>
+          <contract-preview [contract]="getContract(true, 2)"></contract-preview>
         </div>
+        <i class="fas fa-caret-right fa-2x scroll-icon" style="right: 0px;" (click)="increaseIndex(true)"></i>
       </div>
       <h2>Recommended Developers</h2>
       <recommended-developer></recommended-developer>

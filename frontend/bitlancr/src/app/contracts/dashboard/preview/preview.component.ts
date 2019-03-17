@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
 	selector: 'contract-preview',
@@ -7,20 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ContractPreviewComponent implements OnInit {
 
-	@Input() id = Number;
+	@Input() contract = {
+		title: String,
+		nextSprint: String,
+		imgSrc: String
+	};
 	mockData = [];
 
 	constructor() {
-		this.mockData[1] = {
-			title: "Processor Work",
-			nextSprint: "May 9, 2019",
-			imgSrc: "assets/intel/job1.png"
-		};
-		this.mockData[2] = {
-			title: "Java FX Interface",
-			nextSprint: "April 20, 2019",
-			imgSrc: "assets/oracle/logo.png"
-		};
 	}
 
 	ngOnInit() {

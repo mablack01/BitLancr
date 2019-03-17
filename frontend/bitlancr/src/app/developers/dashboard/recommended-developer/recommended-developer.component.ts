@@ -16,37 +16,37 @@ export class RecommendedDeveloperComponent implements OnInit {
 			imgUrl: "assets/people/person1.png",
 			skills: ["bootstrap", "html", "material"],
 			avgPay: 60
-		},
-			this.mockData[1] = {
-				name: "Levy Tate",
-				imgUrl: "assets/people/person2.png",
-				skills: ["react", "html"],
-				avgPay: 9
-			},
-			this.mockData[2] = {
-				name: "Felix Cited",
-				imgUrl: "assets/people/person3.png",
-				skills: ["sql", "java"],
-				avgPay: 69
-			},
-			this.mockData[3] = {
-				name: "Bill Gates",
-				imgUrl: "assets/people/person6.png",
-				skills: ["flask", "angular", "sql"],
-				avgPay: 1500000
-			},
-			this.mockData[4] = {
-				name: "Doris Shutt",
-				imgUrl: "assets/people/person5.png",
-				skills: ["react", "angular", "html", "bootstrap"],
-				avgPay: 74756
-			},
-			this.mockData[5] = {
-				name: "Lee Vitoff",
-				imgUrl: "assets/people/person4.png",
-				skills: ["java"],
-				avgPay: 420
-			}
+		};
+		this.mockData[1] = {
+			name: "Levy Tate",
+			imgUrl: "assets/people/person2.png",
+			skills: ["react", "html"],
+			avgPay: 9
+		};
+		this.mockData[2] = {
+			name: "Felix Cited",
+			imgUrl: "assets/people/person3.png",
+			skills: ["sql", "java"],
+			avgPay: 69
+		};
+		this.mockData[3] = {
+			name: "Bill Gates",
+			imgUrl: "assets/people/person6.png",
+			skills: ["flask", "angular", "sql"],
+			avgPay: 1500000
+		};
+		this.mockData[4] = {
+			name: "Doris Shutt",
+			imgUrl: "assets/people/person5.png",
+			skills: ["react", "angular", "html", "bootstrap"],
+			avgPay: 74756
+		};
+		this.mockData[5] = {
+			name: "Lee Vitoff",
+			imgUrl: "assets/people/person4.png",
+			skills: ["java"],
+			avgPay: 420
+		};
 		this.renderColumns();
 	}
 
