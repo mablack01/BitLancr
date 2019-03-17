@@ -1,8 +1,8 @@
 <div class="clr-row dash-card">
   <div class="clr-col-4 dash-card-title-section">
-    <h4>{{ mockData[id].title }}</h4>
+    <h4>{{ contract.title }}</h4>
     <p class="dash-card-sub-title">
-      Next Sprint: {{ mockData[id].nextSprint }}
+      Next Sprint: {{ contract.nextSprint }}
     </p>
   </div>
   <div class="clr-col-6 dash-card-content">
@@ -11,6 +11,6 @@
     <a href="/">Trello</a>
   </div>
   <div class="clr-col-2 dash-card-info">
-    <img [src]="mockData[id].imgSrc" />
+    <img [src]="contract.imgSrc" />
   </div>
 </div>

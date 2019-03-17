@@ -13,10 +13,10 @@
       <h2>Current Contracts</h2>
       <div class="clr-row">
         <div class="clr-col-md">
-          <contract-preview [id]=0></contract-preview>
+          <contract-preview [contract]="getContract(1)"></contract-preview>
         </div>
         <div class="clr-col-md">
-          <contract-preview [id]=1></contract-preview>
+          <contract-preview [contract]="getContract(2)"></contract-preview>
         </div>
       </div>
       <h2>Recommended Contracts</h2>
@@ -34,12 +34,12 @@
       </div>
       <h2>Current Contracts</h2>
       <div class="clr-row scroll-section">
-        <i class="fas fa-caret-left fa-2x scroll-icon" (click)="decreaseIndex()"></i>
+        <i class="fas fa-caret-left fa-2x scroll-icon" style="left: 0px;" (click)="decreaseIndex()"></i>
         <div class="clr-col-md">
-          <contract-preview [id]="getContract(1)" (contractAmount)="setContractAmount($event)"></contract-preview>
+          <contract-preview [contract]="getContract(1)"></contract-preview>
         </div>
         <div class="clr-col-md">
-          <contract-preview [id]="getContract(2)" (contractAmount)="setContractAmount($event)"></contract-preview>
+          <contract-preview [contract]="getContract(2)"></contract-preview>
         </div>
         <i class="fas fa-caret-right fa-2x scroll-icon" style="right: 0px;" (click)="increaseIndex()"></i>
       </div>

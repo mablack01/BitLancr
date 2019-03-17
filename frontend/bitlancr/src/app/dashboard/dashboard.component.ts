@@ -11,25 +11,45 @@ export class DashboardComponent implements OnInit {
 	isDeveloper = false;
 	contractIndex = 0;
 	contractLength = 0;
+	currentContracts = [];
 
-	constructor() { }
+	constructor() {
+		this.loadCurrentContracts();
+	}
 
 	ngOnInit() {
 	}
 
-	setContractAmount(event) {
-		this.contractLength = event;
+	loadCurrentContracts() {
+		//Insert http request to get current contracts.
+		//Using mock data for now till the backend is setup.
+		this.currentContracts[0] = {
+			title: "Processor Work",
+			nextSprint: "May 9, 2019",
+			imgSrc: "assets/intel/job1.png"
+		};
+		this.currentContracts[1] = {
+			title: "Java FX Interface",
+			nextSprint: "April 20, 2019",
+			imgSrc: "assets/oracle/logo.png"
+		};
+		this.currentContracts[2] = {
+			title: "Some Other Job",
+			nextSprint: "March 25, 2019",
+			imgSrc: "assets/companies/bbb.png"
+		};
+		this.contractLength = this.currentContracts.length;
 	}
 
 	getContract(item: Number) {
 		if (item == 1) {
-			return this.contractIndex;
+			return this.currentContracts[this.contractIndex];
 		} else {
 			let nextIndex = this.contractIndex + 1;
 			if (nextIndex >= this.contractLength) {
 				nextIndex = 0;
 			}
-			return nextIndex;
+			return this.currentContracts[nextIndex];
 		}
 	}
 
