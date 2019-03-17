@@ -9,6 +9,7 @@ export class DashboardComponent implements OnInit {
 
 	//We can find this out through a JWT session, hard coded for now.
 	isDeveloper = false;
+	loaded = false;
 	openBids = [];
 	contractPostingIndex = 0;
 	contractPostingLength = 0;
@@ -24,6 +25,14 @@ export class DashboardComponent implements OnInit {
 			this.loadContractPostings();
 		}
 		this.loadCurrentContracts();
+		/*This is to simulate the endpoints loading. Once we set up endpoints to
+		* load actual data, we will use (request).then() to set loaded = true.
+		*/
+		var root = this;
+		setTimeout(function() {
+			root.loaded = true;
+			console.log("Data loaded.");
+		}, 3000);
 	}
 
 	ngOnInit() {
