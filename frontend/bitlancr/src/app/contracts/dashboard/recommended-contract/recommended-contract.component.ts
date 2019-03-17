@@ -16,37 +16,37 @@ export class RecommendedContractComponent implements OnInit {
 			imgUrl: "assets/oracle/logo.png",
 			skills: ["angular", "bootstrap"],
 			avgBid: 3500
-		},
-			this.mockData[1] = {
-				title: "Webapp Design",
-				imgUrl: "assets/companies/company1.png",
-				skills: ["react", "material"],
-				avgBid: 420
-			},
-			this.mockData[2] = {
-				title: "Simple Application",
-				imgUrl: "assets/intel/job1.png",
-				skills: ["java"],
-				avgBid: 69
-			},
-			this.mockData[3] = {
-				title: "Grid Layout",
-				imgUrl: "assets/companies/company3.png",
-				skills: ["html"],
-				avgBid: 710
-			},
-			this.mockData[4] = {
-				title: "Endpoint Creation",
-				imgUrl: "assets/companies/company5.png",
-				skills: ["flask"],
-				avgBid: 21
-			},
-			this.mockData[5] = {
-				title: "Database Modeling",
-				imgUrl: "assets/companies/company4.png",
-				skills: ["sql"],
-				avgBid: 12345
-			}
+		};
+		this.mockData[1] = {
+			title: "Webapp Design",
+			imgUrl: "assets/companies/company1.png",
+			skills: ["react", "material"],
+			avgBid: 420
+		};
+		this.mockData[2] = {
+			title: "Simple Application",
+			imgUrl: "assets/intel/job1.png",
+			skills: ["java"],
+			avgBid: 69
+		};
+		this.mockData[3] = {
+			title: "Grid Layout",
+			imgUrl: "assets/companies/company3.png",
+			skills: ["html"],
+			avgBid: 710
+		};
+		this.mockData[4] = {
+			title: "Endpoint Creation",
+			imgUrl: "assets/companies/company5.png",
+			skills: ["flask"],
+			avgBid: 21
+		};
+		this.mockData[5] = {
+			title: "Database Modeling",
+			imgUrl: "assets/companies/company4.png",
+			skills: ["sql"],
+			avgBid: 12345
+		};
 		this.renderColumns();
 	}
 

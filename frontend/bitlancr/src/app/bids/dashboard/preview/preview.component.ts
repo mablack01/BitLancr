@@ -11,13 +11,13 @@ export class BidPreviewComponent implements OnInit {
 	mockData = [];
 
 	constructor() {
-		this.mockData[1] = {
+		this.mockData[0] = {
 			title: "Web App",
 			yourBid: 5000,
 			lowestBid: 4000,
 			daysLeft: 5
 		};
-		this.mockData[2] = {
+		this.mockData[1] = {
 			title: "Java Program",
 			yourBid: 25,
 			lowestBid: 25,
