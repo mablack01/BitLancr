@@ -1,0 +1,20 @@
+<div class="clr-row" *ngFor="let row of developers">
+  <div class="clr-col-md-3" *ngFor="let developer of row?.data">
+    <div class="card recommended-card">
+      <div class="card-img recommended-logo">
+        <img [src]="developer.imgUrl" [alt]="developer.name">
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{ developer.name }}</h4>
+        <p class="card-text recommended-text">
+          Average Salary: {{ formatMoney(developer.avgPay) }}<br />
+          Skills: <span *ngFor="let skill of developer.skills"><img class="recommended-skill" src="assets/skills/{{ skill }}.png" /></span>
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="..." class="btn btn-sm btn-link">View Profile</a>
+        <a href="..." class="btn btn-sm btn-link">Send Message</a>
+      </div>
+    </div>
+  </div>
+</div>

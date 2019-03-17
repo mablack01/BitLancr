@@ -10,25 +10,25 @@ import { BidPreviewComponent } from './bids/dashboard/preview/preview.component'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContractPreviewComponent } from './contracts/dashboard/preview/preview.component';
 import { RecommendedContractComponent } from './contracts/dashboard/recommended-contract/recommended-contract.component';
-import { RecomendedDeveloperComponent } from './developers/dashboard/recomended-developer/recomended-developer.component';
+import { RecommendedDeveloperComponent } from './developers/dashboard/recommended-developer/recommended-developer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent,
-    BidPreviewComponent,
-    DashboardComponent,
-    ContractPreviewComponent,
-    RecommendedContractComponent,
-    RecomendedDeveloperComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ClarityModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		NavBarComponent,
+		BidPreviewComponent,
+		DashboardComponent,
+		ContractPreviewComponent,
+		RecommendedContractComponent,
+		RecommendedDeveloperComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		ClarityModule,
+		BrowserAnimationsModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
