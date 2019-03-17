@@ -10,6 +10,7 @@ import { BidPreviewComponent } from './bids/dashboard/preview/preview.component'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContractPreviewComponent } from './contracts/dashboard/preview/preview.component';
 import { RecommendedContractComponent } from './contracts/dashboard/recommended-contract/recommended-contract.component';
+import { RecomendedDeveloperComponent } from './developers/dashboard/recomended-developer/recomended-developer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RecommendedContractComponent } from './contracts/dashboard/recommended-
     BidPreviewComponent,
     DashboardComponent,
     ContractPreviewComponent,
-    RecommendedContractComponent
+    RecommendedContractComponent,
+    RecomendedDeveloperComponent
   ],
   imports: [
     BrowserModule,
