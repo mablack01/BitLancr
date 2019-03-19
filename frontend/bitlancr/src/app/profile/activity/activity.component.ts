@@ -1,5 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ClrDatagridComparatorInterface } from '@clr/angular';
+
+class DateComparator implements ClrDatagridComparatorInterface<String> {
+	compare(a: string, b: string) {
+		console.log(Date.parse(a) - Date.parse(b));
+		return Date.parse(a) - Date.parse(b);
+	}
+}
 
 @Component({
 	selector: 'activity',
@@ -7,6 +15,8 @@ import { Router } from '@angular/router';
 	styleUrls: ['./activity.component.css']
 })
 export class ActivityComponent implements OnInit {
+
+	dateSort = new DateComparator();
 
 	@Input()
 	userActivity = [
