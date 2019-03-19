@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
 	//We can find this out through a JWT session, hard coded for now.
-	isDeveloper = false;
+	isDeveloper = true;
 	loaded = false;
 	openBids = [];
 	contractPostingIndex = 0;
