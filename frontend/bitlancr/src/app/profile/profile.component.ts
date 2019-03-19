@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
 				skills: ["java", "javascript", "angular"],
 				bio: "Emerging technologies are disrupting old paradigms and unleashing new opportunities. Oracle has embedded innovative technologies in every aspect of our cloud, enabling companies to reimagine their businesses, processes, and experiences. With the introduction of Oracle Autonomous Database, the industry’s only self - driving, self - securing, and self - repairing database, Oracle is again revolutionizing how data is managed.Oracle is the #1 provider of business software, with a broad portfolio of solutions for companies of all sizes.Today, 430, 000 customers in 175 countries use Oracle technologies to seize business opportunities and solve real, tangible challenges.",
 				website: "oracle.com",
-				profilePicture: "./oracle/logo.png",
+				profilePicture: "assets/oracle/logo.png",
 				organization: "Oracle",
 				accountLevel: "Premium",
 				status: "Looking for software developers."
@@ -42,7 +42,7 @@ export class ProfileComponent implements OnInit {
 				skills: ["python", "mysql", "php"],
 				bio: "Emerging technologies are disrupting old paradigms and unleashing new opportunities. Oracle has embedded innovative technologies in every aspect of our cloud, enabling companies to reimagine their businesses, processes, and experiences. With the introduction of Oracle Autonomous Database, the industry’s only self - driving, self - securing, and self - repairing database, Oracle is again revolutionizing how data is managed.Oracle is the #1 provider of business software, with abroad portfolio of solutions for companies of all sizes.Today, 430, 000 customers in 175 countries use Oracle technologies to seize business opportunities and solve real, tangible challenges.",
 				website: "intel.com",
-				profilePicture: "./intel/job1.png",
+				profilePicture: "assets/intel/job1.png",
 				organization: "Intel",
 				accountLevel: "Premium",
 				status: "Looking for software developers."

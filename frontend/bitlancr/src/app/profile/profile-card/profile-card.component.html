@@ -1,3 +1,18 @@
-<p>
-  Heyyyyyy {{ userData.fname }}!
-</p>
+<div class="card">
+  <div class="card-block">
+    <div class="card-media-block wrap">
+      <img class="card-media-image" [src]="userData.profilePicture" [alt]="getName()" />
+      <div class="card-media-description">
+        <span class="card-media-title">{{ getName() }}</span>
+        <span class="card-media-text">Lorum Lorem Lipsum??</span>
+      </div>
+    </div>
+    <p class="card-text">
+      ...
+    </p>
+  </div>
+  <div class="card-footer">
+    <a class="card-link">Button One</a>
+    <a class="card-link">Button Two</a>
+  </div>
+</div>

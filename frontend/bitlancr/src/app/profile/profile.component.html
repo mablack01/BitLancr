@@ -1,7 +1,6 @@
 <div class="main-container" style="padding-top: 2.5rem">
   <div class="content-container">
     <div class="content-area" *ngIf="loaded">
-      <p>Profile Page for {{ userData.handle }}</p>
       <profile-card [userData]="userData"></profile-card>
     </div>
     <div class="loading-box" *ngIf="!loaded">
