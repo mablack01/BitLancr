@@ -1,0 +1,13 @@
+<clr-datagrid class="activity-grid">
+  <clr-dg-column>Activity</clr-dg-column>
+  <clr-dg-column clrDgField="date" [clrDgSortBy]="dateOrder">Date</clr-dg-column>
+  <clr-dg-column>Action</clr-dg-column>
+
+  <clr-dg-row *ngFor="let activity of userActivity" (click)="openAction(activity)">
+    <clr-dg-cell>{{ activity.description }}</clr-dg-cell>
+    <clr-dg-cell>{{ activity.date }}</clr-dg-cell>
+    <clr-dg-cell>{{ activity.action }}</clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>{{ userActivity.length }} activities</clr-dg-footer>
+</clr-datagrid>

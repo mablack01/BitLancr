@@ -12,6 +12,9 @@ import { ContractPreviewComponent } from './contracts/dashboard/preview/preview.
 import { RecommendedContractComponent } from './contracts/dashboard/recommended-contract/recommended-contract.component';
 import { RecommendedDeveloperComponent } from './developers/dashboard/recommended-developer/recommended-developer.component';
 import { PostingComponent } from './contracts/dashboard/posting/posting.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileCardComponent } from './profile/profile-card/profile-card.component';
+import { ActivityComponent } from './profile/activity/activity.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +25,10 @@ import { PostingComponent } from './contracts/dashboard/posting/posting.componen
 		ContractPreviewComponent,
 		RecommendedContractComponent,
 		RecommendedDeveloperComponent,
-		PostingComponent
+		PostingComponent,
+		ProfileComponent,
+		ProfileCardComponent,
+		ActivityComponent
 	],
 	imports: [
 		BrowserModule,
