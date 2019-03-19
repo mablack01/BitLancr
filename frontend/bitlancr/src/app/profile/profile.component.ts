@@ -58,7 +58,7 @@ export class ProfileComponent implements OnInit {
 				skills: ["python", "mysql", "php"],
 				bio: "Whaddup my dudes I'm a delvelelepor",
 				website: "CamTheMan.org",
-				pic: "cscigs.jpeg",
+				pic: "assets/people/cscigs.jpg",
 				org: "UMASS AMHERST",
 				accountlvl: "Student",
 				status: "I'm the best dev, so you have to pay me"
@@ -74,7 +74,7 @@ export class ProfileComponent implements OnInit {
 				skills: [],
 				bio: "Hi, I'm Miles, the admin!",
 				website: "",
-				pic: "mblack.jpeg",
+				pic: "assets/people/Miles.jpeg",
 				org: "ByteLancr",
 				accountlvl: "admin",
 				status: "Just an admin, sent here to keep the king's peace."
@@ -90,7 +90,7 @@ export class ProfileComponent implements OnInit {
 				skills: ["python", "mysql", "php", "flask", "C/C++"],
 				bio: "I am a better develper than anybody else",
 				website: "Pail.org",
-				pic: "pailm.jpeg",
+				pic: "assets/people/pailm.jpg",
 				org: "UMASS AMHERST",
 				accountlvl: "Student",
 				status: "I'm the bester dev, so you have to pay me more."
@@ -106,7 +106,7 @@ export class ProfileComponent implements OnInit {
 				skills: ["java", "angular", "C/C++", "javascript", "mysql"],
 				bio: "Average developer, for average wages",
 				website: "TheFacebook.com",
-				pic: "ambergeron.jpeg",
+				pic: "assets/people/ambergeron.jpg",
 				org: "MyBusiness",
 				accountlvl: "Premium",
 				status: "I'm the best dev, so you have to pay me"
@@ -122,7 +122,7 @@ export class ProfileComponent implements OnInit {
 				skills: ["all"],
 				bio: "Watch your step. I'm always watching.",
 				website: "google.com",
-				pic: "sharris.jpeg",
+				pic: "assets/people/sharris.jpg",
 				org: "The Universe",
 				accountlvl: "Omnipotent",
 				status: "Scourging the scum on this site."
