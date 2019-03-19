@@ -27,6 +27,11 @@ export class ProfileCardComponent implements OnInit {
 	ngOnInit() {
 	}
 
+	isBiz() {
+		//Is the current session a business user?
+		return true;
+	}
+
 	getName() {
 		//If a user is a business, use organization name.
 		let role = this.userData.role;

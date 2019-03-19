@@ -1,18 +1,32 @@
-<div class="card">
-  <div class="card-block">
-    <div class="card-media-block wrap">
-      <img class="card-media-image" [src]="userData.profilePicture" [alt]="getName()" />
-      <div class="card-media-description">
-        <span class="card-media-title">{{ getName() }}</span>
-        <span class="card-media-text">Lorum Lorem Lipsum??</span>
+<div class="clr-row">
+  <div class="clr-col-md-4">
+    <div class="card">
+      <div class="card-block">
+        <div class="card-media-block wrap profile-block">
+          <img class="card-media-image profile-picture" [src]="userData.profilePicture" [alt]="getName()" />
+          <div class="card-media-description">
+            <span class="card-media-title profile-name">{{ getName() }}
+              <clr-signpost>
+                <clr-icon shape="avatar" class="is-solid has-badge-info" clrSignpostTrigger>
+                </clr-icon>
+                <clr-signpost-content [clrPosition]="'top-right'" *clrIfOpen>
+                  <i class="fas fa-quote-left fa-sm"></i>&nbsp;{{ userData.status }}&nbsp;<i class="fas fa-quote-right fa-sm"></i>
+                </clr-signpost-content>
+              </clr-signpost>
+            </span>
+            <span class="card-media-text" *ngIf="userData.role != 'biz'">{{ userData.organization }}</span>
+          </div>
+        </div>
+        <div class="profile-skills"><span class="label label-blue skill-label" *ngFor="let skill of userData.skills">{{ skill }}</span><br /></div>
+        <p class="card-text">
+          {{ userData.bio }}
+        </p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-link"><a [href]="userData.website">Website</a></button>
+        <button class="btn btn-link" (click)="sendMessage()">Message</button>
+        <button class="btn btn-link" (click)="createContract()" *ngIf="isBiz()">Contract</button>
       </div>
     </div>
-    <p class="card-text">
-      ...
-    </p>
-  </div>
-  <div class="card-footer">
-    <a class="card-link">Button One</a>
-    <a class="card-link">Button Two</a>
   </div>
 </div>
