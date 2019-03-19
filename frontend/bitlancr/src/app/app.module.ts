@@ -14,6 +14,7 @@ import { RecommendedDeveloperComponent } from './developers/dashboard/recommende
 import { PostingComponent } from './contracts/dashboard/posting/posting.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileCardComponent } from './profile/profile-card/profile-card.component';
+import { ActivityComponent } from './profile/activity/activity.component';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,8 @@ import { ProfileCardComponent } from './profile/profile-card/profile-card.compon
 		RecommendedDeveloperComponent,
 		PostingComponent,
 		ProfileComponent,
-		ProfileCardComponent
+		ProfileCardComponent,
+		ActivityComponent
 	],
 	imports: [
 		BrowserModule,

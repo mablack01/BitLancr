@@ -10,6 +10,7 @@ const routes: Routes = [
 	{ path: 'home', component: DashboardComponent },
 	{ path: 'profile', component: ProfileComponent },
 	{ path: 'profile/:handle', component: ProfileComponent },
+	{ path: 'profile/id/:id', component: ProfileComponent },
 	{ path: '**', component: DashboardComponent } //later we can add a 404
 ];
 

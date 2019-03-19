@@ -9,9 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class ProfileComponent implements OnInit {
 
 	loaded = false;
+	id: String;
 	handle: String;
 	mockData = [];
 	userData: {};
+	userActivity = [];
 
 	constructor(private route: ActivatedRoute) {
 		this.mockData = [
@@ -132,6 +134,7 @@ export class ProfileComponent implements OnInit {
 
 	ngOnInit() {
 		this.handle = this.route.snapshot.paramMap.get('handle');
+		this.id = this.route.snapshot.paramMap.get('id');
 		if (this.handle != null) {
 			//This code simulates we got a handle, load the user.
 			for (let user of this.mockData) {
@@ -139,9 +142,59 @@ export class ProfileComponent implements OnInit {
 					this.userData = user;
 				}
 			}
-		} else {
+		}
+		if (this.id != null) {
+			//This code simulates we got an id, load the user.
+			for (let user of this.mockData) {
+				if (user.id == this.id) {
+					this.userData = user;
+				}
+			}
+		}
+		if (this.id == null && this.handle == null) {
 			//This code simulates no handle was provided, show logged in user.
 			this.userData = this.mockData[3];
+		}
+		//Grab user activity as well, this will be an endpoint
+		this.userActivity[0] = {
+			id: 1,
+			uid: 4,
+			cid: 1,
+			bidId: 2,
+			oid: null,
+			description: "Miles placed a bid on a contract.",
+			action: "View Bid",
+			date: "March 14, 2019"
+		}
+		this.userActivity[1] = {
+			id: 2,
+			uid: 4,
+			cid: 1,
+			bidId: null,
+			oid: null,
+			description: "Miles accepted a contract.",
+			action: "View Contract",
+			date: "March 15, 2019"
+		}
+		this.userActivity[2] = {
+			id: 3,
+			uid: 4,
+			cid: 2,
+			bidId: 4,
+			oid: null,
+			description: "Miles placed a bid on a contract.",
+			action: "View Bid",
+			date: "March 17, 2019"
+		}
+		this.userActivity[3] = {
+			id: 4,
+			uid: 4,
+			cid: null,
+			bidId: null,
+			oid: 3,
+			description: "Miles endorsed a user.",
+			action: "View Profile",
+			date: "March 19, 2019"
 		}
 		//Gather user data from endpoint using handle, if exists.
 		//Simulating an end point here.
