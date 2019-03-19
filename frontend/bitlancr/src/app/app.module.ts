@@ -13,6 +13,7 @@ import { RecommendedContractComponent } from './contracts/dashboard/recommended-
 import { RecommendedDeveloperComponent } from './developers/dashboard/recommended-developer/recommended-developer.component';
 import { PostingComponent } from './contracts/dashboard/posting/posting.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProfileCardComponent } from './profile/profile-card/profile-card.component';
 
 @NgModule({
 	declarations: [
@@ -24,7 +25,8 @@ import { ProfileComponent } from './profile/profile.component';
 		RecommendedContractComponent,
 		RecommendedDeveloperComponent,
 		PostingComponent,
-		ProfileComponent
+		ProfileComponent,
+		ProfileCardComponent
 	],
 	imports: [
 		BrowserModule,

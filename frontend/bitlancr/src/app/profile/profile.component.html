@@ -2,6 +2,7 @@
   <div class="content-container">
     <div class="content-area" *ngIf="loaded">
       <p>Profile Page for {{ userData.handle }}</p>
+      <profile-card [userData]="userData"></profile-card>
     </div>
     <div class="loading-box" *ngIf="!loaded">
       <img src="assets/loading.svg" class="loading-image" title="loading screen" alt="loading screen" />
