@@ -1,4 +1,4 @@
-.dash-card {
+ .dash-card {
   border-radius: 15px;
   border: 2px solid;
   margin: 14px 12px;
@@ -10,21 +10,25 @@
   transform: scale(1.03);
 }
 
-.dash-card-icon {
-  display: inline-block;
-  text-align: center;
-}
-
-.dash-card-content {
+.dash-card-content.contracts {
   border-right: 2px dashed;
   display: flex;
   justify-content: space-between;
 }
 
+.dash-card-content.openbids {
+  padding-top: 1.25vw;
+  border-right: 2px dashed;
+  display: grid;
+}
+
+
+
 @media (min-width:1025px) {
   .dash-card-content {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: .75vw;
+    padding-left: 1vw;
+    padding-right: 4vw;
   }
 }
 
@@ -49,6 +53,24 @@
   object-fit: cover;
   width: 100%;
   max-height: 100%;
+}
+
+.dash-card-title-section{
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  padding-left: 0;
+}
+
+.clr-col-4.dash-card-title-section h4,p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.clr-col-2.dash-card-day p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-container {
+  background-image: linear-gradient(rgb(255, 167, 64), rgba(252, 145, 68, 0.89));
 }
 
 .recommended-card {

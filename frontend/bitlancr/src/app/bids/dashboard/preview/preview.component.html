@@ -5,14 +5,13 @@
       Lowest Bid: {{ formatMoney(bid.lowestBid) }}
     </p>
   </div>
-  <div class="clr-col-6 dash-card-content">
+  <div class="clr-col-6 dash-card-content openbids">
     <span class="dash-card-icon" (click)="cancel()">
       <i class="fas fa-ban fa-5x"></i>
-      <br />Cancel
+      <br />
     </span>
     <span class="dash-card-icon" (click)="modify()">
       <i class="fas fa-cog fa-5x"></i>
-      <br />Modify
     </span>
   </div>
   <div class="clr-col-2 dash-card-day">
