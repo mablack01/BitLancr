@@ -28,11 +28,13 @@ looker = inspect(engine)
 # the 'tables' variable will hold a list of strings of tables in our DB
 tables = looker.get_table_names()
 
+print('table names:', tables)
+
 print(" DB contains %i tables:" %len(tables))
 
 for table in tables:
     print("")
-    print(" --- Table: %s [%i rows] ---" %(table, session.query(table).count()) )
+    print(" --- Table: %s ---" %(table))
 
     # columns is a list of Python dictionaries representing each column
     columns = looker.get_columns(table)
