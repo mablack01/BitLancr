@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'contract',
@@ -7,11 +7,66 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContractComponent implements OnInit {
 
+	@Input() id: Number;
 	loaded = true;
+	mockData = [];
+	contractData = {};
 
-	constructor() { }
+	constructor() {
+		this.loadContractData();
+		//Loading Endpoints
+		var root = this;
+		setTimeout(function() {
+			root.loaded = true;
+			console.log("Data loaded.");
+		}, 3000);
+	}
 
 	ngOnInit() {
+	}
+
+	loadContractData() {
+		this.mockData[0] = {
+			id: 1,
+			did: 4,
+			bizid: 1,
+			avgbid: 50,
+			lowbid: 42,
+			numbids: 14,
+			postdate: "03/01/19",
+			startdate: "03/21/19",
+			skills: ["html", "css"],
+			charter: "",
+			nextSprintDate: "04/15/19",
+			open: false,
+			trello: "",
+			git: "",
+			desc: "We need a wireframe design for our new dashboard.",
+			title: "Create Wireframe"
+		};
+		this.mockData[1] = {
+			id: 2,
+			did: null,
+			bizid: 2,
+			avgbid: 38,
+			lowbid: 30,
+			numbids: 5,
+			postdate: "03/18/19",
+			startdate: "",
+			skills: ["flask", "sql"],
+			charter: "",
+			nextSprintDate: "04/15/19",
+			open: true,
+			trello: "",
+			git: "",
+			desc: "Paul needs someone to do the backend cause he is lazy.",
+			title: "Backend Setup"
+		};
+		for (let contract of this.mockData) {
+			if (contract.id == this.id) {
+				this.contractData = contract;
+			}
+		}
 	}
 
 }
