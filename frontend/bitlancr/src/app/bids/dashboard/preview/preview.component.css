@@ -1,6 +1,13 @@
 .clr-row.dash-card{
   background-color: white;
+  border-color: #499bb5;
 }
+
+span.dash-card-icon {
+  width: 2.25vw;
+  height: 2.25vw;
+}
+
 
 .dash-card-day {
   text-align: center;
