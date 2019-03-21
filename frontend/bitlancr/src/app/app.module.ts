@@ -17,6 +17,7 @@ import { ProfileCardComponent } from './profile/profile-card/profile-card.compon
 import { ActivityComponent } from './profile/activity/activity.component';
 import { ContractComponent } from './contracts/contract.component';
 import { ContractBidComponent } from './contracts/contract-bid/contract-bid.component';
+import { ErrorComponent } from './global/error/error.component';
 
 @NgModule({
 	declarations: [
@@ -32,7 +33,8 @@ import { ContractBidComponent } from './contracts/contract-bid/contract-bid.comp
 		ProfileCardComponent,
 		ActivityComponent,
 		ContractComponent,
-		ContractBidComponent
+		ContractBidComponent,
+		ErrorComponent
 	],
 	imports: [
 		BrowserModule,
