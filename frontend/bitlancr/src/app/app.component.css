@@ -11,7 +11,14 @@
   margin-right: auto;
 }
 
+@media (max-width:1280px) {
+  .content-box {
+    padding-right: 4vw !important;
+    padding-left: 4vw !important;
+  }
+}
+
 .content-box {
-  padding-right: 4vw !important;
-  padding-left: 4vw !important;
+  padding-right: 14vw !important;
+  padding-left: 14vw !important;
 }

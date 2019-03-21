@@ -15,7 +15,7 @@ import { PostingComponent } from './contracts/dashboard/posting/posting.componen
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileCardComponent } from './profile/profile-card/profile-card.component';
 import { ActivityComponent } from './profile/activity/activity.component';
-import { ContractComponent } from './contract/contract.component';
+import { ContractComponent } from './contracts/contract.component';
 
 @NgModule({
 	declarations: [
