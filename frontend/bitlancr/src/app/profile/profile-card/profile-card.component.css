@@ -23,14 +23,3 @@
   text-align: center;
   margin: auto auto 20px auto;
 }
-
-.skill-label {
-  transition: all .2s ease-in-out;
-}
-
-.skill-label:hover {
-  background-color: #63d8ff;
-  color: #ffffff;
-  border: 1.5px solid #a7a7a77d;
-  transform: scale(1.1);
-}

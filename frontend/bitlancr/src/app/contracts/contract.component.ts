@@ -11,10 +11,12 @@ export class ContractComponent implements OnInit {
 	id: string;
 	loaded = true;
 	mockData = [];
+	bids = [];
 	contractData = {};
 
 	constructor(private route: ActivatedRoute) {
 		this.loadContractData();
+		this.loadContractBids();
 		//Loading Endpoints
 		var root = this;
 		setTimeout(function() {
@@ -49,7 +51,9 @@ export class ContractComponent implements OnInit {
 			trello: "",
 			git: "",
 			desc: "We need a wireframe design for our new dashboard.",
-			title: "Create Wireframe"
+			title: "Create Wireframe",
+			organization: "Oracle",
+			imgUrl: "assets/oracle/oracle.png"
 		};
 		this.mockData[1] = {
 			id: 2,
@@ -66,8 +70,56 @@ export class ContractComponent implements OnInit {
 			open: true,
 			trello: "",
 			git: "",
-			desc: "Paul needs someone to do the backend cause he is lazy.",
-			title: "Backend Setup"
+			desc: "Paul needs someone to do the backend cause he is lazy. Place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder, place holder",
+			title: "Backend Setup",
+			organization: "Intel",
+			imgUrl: "assets/intel/job1.png"
+		};
+	}
+
+	loadContractBids() {
+		//Get the bids corresponding to the contract.
+		this.bids[0] = {
+			fname: "Miles",
+			lname: "Black",
+			bidValue: 42,
+			date: "March 18, 2019",
+		};
+		this.bids[1] = {
+			fname: "Bob",
+			lname: "Billing",
+			bidValue: 41,
+			date: "March 18, 2019",
+		};
+		this.bids[2] = {
+			fname: "Miles",
+			lname: "Black",
+			bidValue: 40,
+			date: "March 19, 2019",
+		};
+		this.bids[3] = {
+			fname: "Billy",
+			lname: "Mays",
+			bidValue: 38,
+			date: "March 19, 2019",
+		};
+		this.bids[4] = {
+			fname: "Miles",
+			lname: "Black",
+			bidValue: 37,
+			date: "March 20, 2019",
+		};
+		this.bids[5] = {
+			fname: "Paul",
+			lname: "Mikulskis",
+			bidValue: 35,
+			date: "March 21, 2019",
+		};
+		this.bids[6] = {
+			fname: "Alex",
+			lname: "Bergeron",
+			bidValue: 32,
+			date: "March 21, 2019",
 		};
 	}
 

@@ -1,0 +1,30 @@
+.contract-block {
+  text-align: center;
+}
+
+.contract-picture {
+  margin: auto;
+  height: auto;
+  width: auto;
+  max-height: 6rem;
+  max-width: 6rem;
+  border-radius: 5px;
+  border-width: 2.4px;
+  border-style: solid;
+  border-color: #0025389c;
+}
+
+.contract-name {
+  font-size: x-large;
+  margin: 5px 0px;
+}
+
+.contract-skills {
+  text-align: center;
+  margin: auto auto 20px auto;
+}
+
+.contract-text {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}

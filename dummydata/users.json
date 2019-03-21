@@ -10,7 +10,7 @@
     "bio": "Emerging technologies are disrupting old paradigms and unleashing new opportunities. Oracle has embedded innovative technologies in every aspect of our cloud, enabling companies to reimagine their businesses, processes, and experiences.
             With the introduction of Oracle Autonomous Database, the industry’s only self-driving, self-securing, and self-repairing database, Oracle is again revolutionizing how data is managed. Oracle is the #1 provider of business software, with a broad portfolio of solutions for companies of all sizes. Today, 430,000 customers in 175 countries use Oracle technologies to seize business opportunities and solve real, tangible challenges.",
     "website": "oracle.com",
-    "pic": "./oracle/logo.png",
+    "pic": "assets/oracle/logo.png",
     "org": "Oracle",
     "accountlvl": "Premium",
     "status": "Looking for software developers."
@@ -27,7 +27,7 @@
     "bio": "Emerging technologies are disrupting old paradigms and unleashing new opportunities. Oracle has embedded innovative technologies in every aspect of our cloud, enabling companies to reimagine their businesses, processes, and experiences.
             With the introduction of Oracle Autonomous Database, the industry’s only self-driving, self-securing, and self-repairing database, Oracle is again revolutionizing how data is managed. Oracle is the #1 provider of business software, with a broad portfolio of solutions for companies of all sizes. Today, 430,000 customers in 175 countries use Oracle technologies to seize business opportunities and solve real, tangible challenges.",
     "website": "intel.com",
-    "pic": "./intel/job1.png",
+    "pic": "assets/intel/job1.png",
     "org": "Intel",
     "accountlvl": "Premium",
     "status": "Looking for software developers."
@@ -43,7 +43,7 @@
   "skills": ["python", "mysql", "php"],
   "bio": "Whaddup my dudes I'm a delvelelepor",
   "website": "CamTheMan.org",
-  "pic": "cscigs.jpeg",
+  "pic": "assets/people/cscigs.jpg",
   "org": "UMASS AMHERST",
   "accountlvl": "Student",
   "status": "I'm the best dev, so you have to pay me"
@@ -59,7 +59,7 @@
   "skills": [],
   "bio": "Hi, I'm Miles, the admin!",
   "website": "",
-  "pic": "mblack.jpeg",
+  "pic": "assets/people/Miles.jpeg",
   "org": "ByteLancr",
   "accountlvl": "admin",
   "status": "Just an admin, sent here to keep the king's peace."
@@ -75,7 +75,7 @@
   "skills": ["python", "mysql", "php", "flask", "C/C++"],
   "bio": "I am a better develper than anybody else",
   "website": "Pail.org",
-  "pic": "pailm.jpeg",
+  "pic": "assets/people/pailm.jpg",
   "org": "UMASS AMHERST",
   "accountlvl": "Student",
   "status": "I'm the bester dev, so you have to pay me more."
@@ -91,7 +91,7 @@
   "skills": ["java", "angular", "C/C++", "javascript", "mysql"],
   "bio": "Average developer, for average wages",
   "website": "TheFacebook.com",
-  "pic": "ambergeron.jpeg",
+  "pic": "assets/people/ambergeron.jpg",
   "org": "MyBusiness",
   "accountlvl": "Premium",
   "status": "I'm the best dev, so you have to pay me"
@@ -107,7 +107,7 @@
   "skills": ["all"],
   "bio": "Watch your step. I'm always watching.",
   "website": "google.com",
-  "pic": "sharris.jpeg",
+  "pic": "assets/people/sharris.jpg",
   "org": "The Universe",
   "accountlvl": "Omnipotent",
   "status": "Scourging the scum on this site."

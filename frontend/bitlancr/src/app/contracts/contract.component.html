@@ -1,7 +1,7 @@
 <div class="main-container" style="padding-top: 2.5rem">
   <div class="content-container">
     <div class="content-area content-box" *ngIf="loaded && contractData.open">
-      <contract-bid></contract-bid>
+      <contract-bid [contract]="contractData" [bids]="bids"></contract-bid>
     </div>
     <div class="content-area content-box" *ngIf="loaded && !contractData.open">
       <p>{{ contractData.title }}: this contract is CLOOSSEEDDD...</p>
