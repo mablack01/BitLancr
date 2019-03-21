@@ -1,8 +1,6 @@
-
-
 span.dash-card-icon {
-  width: 2.25vw;
-  height: 2.25vw;
+  width: inherit;
+  height: inherit;
 }
 
 
@@ -15,14 +13,26 @@ span.dash-card-icon {
   font-size: xx-large;
 }
 
-.fa-5x {
-  font-size: 2vw;
-  color: rgb(153, 153, 153);
+.dash-card-day-label{
+  margin-top: 0.5vw;
+}
+
+.fa-5x.fa-cog {
+  margin-top: 0vw;
+  font-size: 1.75vw;
+  color: rgb(147, 147, 147);
+  transition: all .2s ease-in-out;
+}
+
+.fa-5x.fa-ban {
+  padding-top: -2vw;
+  font-size: 1.75vw;
+  color: rgb(147, 147, 147);
   transition: all .2s ease-in-out;
 }
 
 .fa-5x:hover {
-  color: #499bb5;
+  color: #FF7E57;
   -moz-transform: scale(1.25);
   -webkit-transform: scale(1.25);
   -o-transform: scale(1.25);

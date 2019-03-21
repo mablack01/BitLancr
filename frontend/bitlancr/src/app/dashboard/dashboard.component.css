@@ -10,25 +10,22 @@
   transform: scale(1.03);
 }
 
-.dash-card-content.contracts {
+.contracts .dash-card-content {
   border-right: 2px solid #499bb5;
   display: flex;
   justify-content: space-between;
 }
 
-.dash-card-content.contracts a {
+.contracts .dash-card-content a {
   height: 24px;
   display: inline-grid;
 }
 
-.dash-card-content.openbids {
-  margin-left: -1.5vw;
-  padding-top: 1.25vw;
-  border-right: 2px solid #499bb5;
-  display: grid;
+.dash-card-skills h1{
+  font-size: 2vw;
+  display: block;
+  margin-top: 0rem;
 }
-
-
 
 @media (min-width:1025px) {
   .dash-card-content {
@@ -44,11 +41,13 @@
 }
 
 .dash-card-title-section {
+  background-color: #499bb5;
   text-align: left;
-  border-top-left-radius: 13px;
-  border-bottom-left-radius: 13px;
+  border-right: 2px solid #499bb5;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   padding-left: 1vw;
-  margin-top: -.75vw;
+  padding-top: -.75vw;
 }
 
 .dash-card-sub-title {
@@ -65,13 +64,16 @@
 }
 
 .clr-row.dash-card{
-  background-color: white;
   border-color: #499bb5;
-  box-shadow: 3px 3px 12px #888888;
+  box-shadow: 0px 0px 12px #888888;
 }
 
-.clr-col-4.dash-card-title-section h4,p {
-  color: rgb(99, 99, 99);
+.dash-card-title-section h4 {
+  color: white;
+}
+
+.dash-card-title-section p {
+  color: white;
 }
 
 .clr-col-2.dash-card-day p {
@@ -80,7 +82,7 @@
 
 .recommended-card {
   margin: 14px 12px;
-  box-shadow: 3px 3px 8px #888888;
+  box-shadow: 0px 0px 12px #888888;
   transition: all .1s ease-in-out;
 }
 
@@ -145,11 +147,10 @@
    display: inline-grid;
  }
 
- .dash-card-content.openbids {
-   margin-left: -1.5vw;
-   padding-top: 1.25vw;
+ .openbids .dash-card-content {
    border-right: 2px solid #499bb5;
    display: grid;
+   padding-top: 1.5vw;
  }
 
  @media (min-width:1025px) {
@@ -165,14 +166,6 @@
    padding-right: 0px;
  }
 
- .dash-card-title-section {
-   text-align: left;
-   border-top-left-radius: 13px;
-   border-bottom-left-radius: 13px;
-   padding-left: 1vw;
-   margin-top: -.75vw;
- }
-
  .dash-card-sub-title {
    margin-top: 6px;
    margin-bottom: 10px;
@@ -186,16 +179,8 @@
    max-height: 100%;
  }
 
- .clr-col-4.dash-card-title-section h4, p {
-   color: rgb(99, 99, 99);
- }
-
  .clr-col-2.dash-card-day p {
    color: rgb(99, 99, 99);
- }
-
- .main-container {
-   background-color: rgba(233, 233, 233, 0.26);
  }
 
  .recommended-card {
