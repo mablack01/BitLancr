@@ -16,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileCardComponent } from './profile/profile-card/profile-card.component';
 import { ActivityComponent } from './profile/activity/activity.component';
 import { ContractComponent } from './contracts/contract.component';
+import { ContractBidComponent } from './contracts/contract-bid/contract-bid.component';
 
 @NgModule({
 	declarations: [
@@ -30,7 +31,8 @@ import { ContractComponent } from './contracts/contract.component';
 		ProfileComponent,
 		ProfileCardComponent,
 		ActivityComponent,
-		ContractComponent
+		ContractComponent,
+		ContractBidComponent
 	],
 	imports: [
 		BrowserModule,

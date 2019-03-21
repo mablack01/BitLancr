@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'contract',
@@ -7,12 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ContractComponent implements OnInit {
 
-	@Input() id: Number;
+	id: string;
 	loaded = true;
 	mockData = [];
 	contractData = {};
 
-	constructor() {
+	constructor(private route: ActivatedRoute) {
 		this.loadContractData();
 		//Loading Endpoints
 		var root = this;
@@ -23,6 +24,12 @@ export class ContractComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		this.id = this.route.snapshot.paramMap.get('id');
+		for (let contract of this.mockData) {
+			if (contract.id == this.id) {
+				this.contractData = contract;
+			}
+		}
 	}
 
 	loadContractData() {
@@ -62,11 +69,6 @@ export class ContractComponent implements OnInit {
 			desc: "Paul needs someone to do the backend cause he is lazy.",
 			title: "Backend Setup"
 		};
-		for (let contract of this.mockData) {
-			if (contract.id == this.id) {
-				this.contractData = contract;
-			}
-		}
 	}
 
 }
