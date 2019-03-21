@@ -1,5 +1,4 @@
  .dash-card {
-<<<<<<< HEAD
   border-radius: 5px;
   border: 2px solid;
   margin: 14px 12px;
@@ -124,13 +123,11 @@
 
 .scroll-icon:hover {
   color: #002538;
-}
-=======
-   border-radius: 15px;
-   border: 2px solid;
-   margin: 14px 12px;
-   height: auto;
-   transition: all .1s ease-in-out;
+  border-radius: 15px;
+  border: 2px solid;
+  margin: 14px 12px;
+  height: auto;
+  transition: all .1s ease-in-out;
  }
 
  .dash-card:hover {
@@ -241,4 +238,3 @@
  .scroll-icon:hover {
    color: #002538;
  }
->>>>>>> e47b87c29da925d8446c9b965d39a2a6b74cb082
