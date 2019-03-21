@@ -1,9 +1,9 @@
  .dash-card {
-  border-radius: 15px;
+  border-radius: 5px;
   border: 2px solid;
   margin: 14px 12px;
   height: auto;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .dash-card:hover {
@@ -64,6 +64,12 @@
   max-height: 100%;
 }
 
+.clr-row.dash-card{
+  background-color: white;
+  border-color: #499bb5;
+  box-shadow: 3px 3px 12px #888888;
+}
+
 .clr-col-4.dash-card-title-section h4,p {
   color: rgb(99, 99, 99);
 }
@@ -72,12 +78,14 @@
   color: rgb(99, 99, 99);
 }
 
-.main-container {
-  background-color: rgba(233, 233, 233, 0.26);
-}
-
 .recommended-card {
   margin: 14px 12px;
+  box-shadow: 3px 3px 8px #888888;
+  transition: all .1s ease-in-out;
+}
+
+.recommended-card:hover{
+  transform: scale(1.03);
 }
 
 .recommended-title {

@@ -1,7 +1,4 @@
-.clr-row.dash-card{
-  background-color: white;
-  border-color: #499bb5;
-}
+
 
 span.dash-card-icon {
   width: 2.25vw;
@@ -20,4 +17,15 @@ span.dash-card-icon {
 
 .fa-5x {
   font-size: 2vw;
+  color: rgb(153, 153, 153);
+  transition: all .2s ease-in-out;
+}
+
+.fa-5x:hover {
+  color: #499bb5;
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
 }
