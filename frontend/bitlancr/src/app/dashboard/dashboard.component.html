@@ -2,7 +2,7 @@
   <div class="content-container">
     <div class="content-area content-box" *ngIf="isDeveloper && loaded">
       <h2>Open Bids</h2>
-      <div class="clr-row">
+      <div class="clr-row cardscroll">
         <div class="clr-col-md">
           <bid-preview [bid]="openBids[0]"></bid-preview>
         </div>
@@ -11,7 +11,7 @@
         </div>
       </div>
       <h2>Current Contracts</h2>
-      <div class="clr-row">
+      <div class="clr-row cardscroll">
         <div class="clr-col-md">
           <contract-preview [contract]="getContract(1)"></contract-preview>
         </div>

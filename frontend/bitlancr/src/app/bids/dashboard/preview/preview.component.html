@@ -6,19 +6,20 @@
     </p>
   </div>
   <div class="clr-col-6 dash-card-content">
-    <span class="dash-card-icon" (click)="cancel()">
+    <span class="dash-card-icon cancel" (click)="cancel()">
       <i class="fas fa-ban fa-5x"></i>
       <br />
     </span>
-    <span class="dash-card-icon" (click)="modify()">
+    <span class="dash-card-icon modify" (click)="modify()">
       <i class="fas fa-cog fa-5x"></i>
     </span>
     <div class="dash-card-skills">
       <h1>Skills:</h1>
     </div>
   </div>
-  <div class="clr-col-2 dash-card-day">
+  <div class="clr-col-2 dash-card-day dash-card-side">
     <p class="dash-card-day-number">{{ bid.daysLeft }}</p>
-    <p class="dash-card-day-label">Days Left</p>
+    <p class="dash-card-day-label">Days</p>
+    <p class="dash-card-day-label-left"> Left</p>
   </div>
 </div>

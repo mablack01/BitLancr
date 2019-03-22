@@ -1,9 +1,17 @@
  .dash-card {
+  max-height: 100px;
+  border: 2px #499bb5 solid;
   border-radius: 5px;
-  border: 2px solid;
   margin: 14px 12px;
   height: auto;
   transition: all .1s ease-in-out;
+}
+
+.horizonscroll{
+  max-height: 450px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .dash-card:hover {
@@ -11,7 +19,6 @@
 }
 
 .contracts .dash-card-content {
-  border-right: 2px solid #499bb5;
   display: flex;
   justify-content: space-between;
 }
@@ -22,12 +29,12 @@
 }
 
 .dash-card-skills h1{
-  font-size: 2vw;
+  font-size: 1.5vw;
   display: block;
-  margin-top: 0rem;
+  margin-top: -.25vw;
 }
 
-@media (min-width:1025px) {
+@media (min-width:1080px) {
   .dash-card-content {
     padding-top: .75vw;
     padding-left: 1vw;
@@ -41,7 +48,7 @@
 }
 
 .dash-card-title-section {
-  background-color: #499bb5;
+  background-color: #55b7d6;
   text-align: left;
   border-right: 2px solid #499bb5;
   border-top-left-radius: 0px;
@@ -61,6 +68,12 @@
   object-fit: cover;
   width: 100%;
   max-height: 100%;
+}
+
+@media (max-width:1080px) {
+  .dash-card-side {
+    display: none;
+  }
 }
 
 .clr-row.dash-card{
@@ -84,6 +97,7 @@
   margin: 14px 12px;
   box-shadow: 0px 0px 12px #888888;
   transition: all .1s ease-in-out;
+  flex: 0 0 auto;
 }
 
 .recommended-card:hover{
@@ -137,7 +151,6 @@
  }
 
  .dash-card-content.contracts {
-   border-right: 2px solid #499bb5;
    display: flex;
    justify-content: space-between;
  }
@@ -148,13 +161,13 @@
  }
 
  .openbids .dash-card-content {
-   border-right: 2px solid #499bb5;
    display: grid;
    padding-top: 1.5vw;
  }
 
- @media (min-width:1025px) {
+ @media (min-width:1080px) {
    .dash-card-content {
+     border-right: 2px #499bb5 solid;
      padding-top: .75vw;
      padding-left: 1vw;
      padding-right: 4vw;
@@ -185,7 +198,16 @@
 
  .recommended-card {
    margin: 14px 12px;
+   display: inline-block;
  }
+
+.recommended-card h4{
+  color: white;
+}
+
+.recommended-card p{
+  color: white;
+}
 
  .recommended-title {
    position: absolute;
