@@ -13,10 +13,15 @@ export class ContractComponent implements OnInit {
 	mockData = [];
 	bids = [];
 	contractData = {};
+	isDeveloper = true;
 
 	constructor(private route: ActivatedRoute) {
 		this.loadContractData();
-		this.loadContractBids();
+		if (!this.isDeveloper) {
+			this.loadContractBids();
+		} else {
+			//load charter
+		}
 		//Loading Endpoints
 		var root = this;
 		setTimeout(function() {
