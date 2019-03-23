@@ -1,5 +1,5 @@
  .dash-card {
-  max-height: 100px;
+  min-height: 140px;
   border: 2px #499bb5 solid;
   border-radius: 5px;
   margin: 14px 12px;
@@ -8,10 +8,19 @@
 }
 
 .horizonscroll{
-  max-height: 450px;
+  min-height: 450px;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .horizonscroll{
+    margin-left: 7.5vw;
+  }
+  .recommended-card{
+    width: 75vw;
+  }
 }
 
 .dash-card:hover {
@@ -54,11 +63,11 @@
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   padding-left: 1vw;
-  padding-top: -.75vw;
+  padding-top: 1vw;
 }
 
 .dash-card-sub-title {
-  margin-top: 6px;
+  margin-top: 1vw;
   margin-bottom: 10px;
 }
 
@@ -83,9 +92,12 @@
 
 .dash-card-title-section h4 {
   color: white;
+  margin-top: 0.5vw;
 }
 
 .dash-card-title-section p {
+  margin-top: 1vw;
+  margin-bottom: -.5vw;
   color: white;
 }
 
@@ -179,10 +191,7 @@
    padding-right: 0px;
  }
 
- .dash-card-sub-title {
-   margin-top: 6px;
-   margin-bottom: 10px;
- }
+
 
  .dash-card-info>img {
    border-left: 2px solid;
@@ -202,11 +211,11 @@
  }
 
 .recommended-card h4{
-  color: white;
+  color: black;
 }
 
 .recommended-card p{
-  color: white;
+  color: black;
 }
 
  .recommended-title {
@@ -244,4 +253,9 @@
 
  .scroll-icon:hover {
    color: #002538;
+ }
+
+
+ .dash-card-day-label-left{
+   margin-top: -.5vw;
  }

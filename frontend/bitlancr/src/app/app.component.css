@@ -11,14 +11,18 @@
   margin-right: auto;
 }
 
-@media (max-width:2880px) {
-  .content-box {
-    padding-right: 4vw !important;
-    padding-left: 4vw !important;
-  }
-}
-
 .content-box {
   padding-right: 14vw !important;
   padding-left: 14vw !important;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .content-box {
+    padding-right: 1vw !important;
+    padding-left: 1vw !important;
+  }
+  body {
+      width: 75%;
+      overflow-x: hidden;
+  }
 }
