@@ -1,3 +1,16 @@
+span.dash-card-icon {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.dash-card-icon.cancel {
+  margin-top: -.75vw;
+}
+
+.dash-card-icon.modify {
+  margin-top: .5vw;
+}
+
 .dash-card-day {
   text-align: center;
 }
@@ -5,4 +18,42 @@
 .dash-card-day-number {
   font-weight: 800;
   font-size: xx-large;
+}
+
+.dash-card-day-label{
+  margin-top: 0.5vw;
+}
+
+.dash-card-side{
+  padding-top: 1vw;
+}
+
+.fa-5x.fa-cog {
+  font-size: 1.75vw;
+  color: rgb(147, 147, 147);
+  transition: all .2s ease-in-out;
+}
+
+.fa-5x.fa-ban {
+  font-size: 1.75vw;
+  color: rgb(147, 147, 147);
+  transition: all .2s ease-in-out;
+}
+
+.fa-5x.fa-ban:hover {
+  color: #FF7E57;
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.fa-5x.fa-cog:hover {
+  color: #55b7d6;
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
 }

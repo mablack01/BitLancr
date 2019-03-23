@@ -1,8 +1,11 @@
-<div class="clr-row dash-card">
+<div class="clr-row dash-card contracts">
   <div class="clr-col-4 dash-card-title-section">
     <h4>{{ contract.title }}</h4>
     <p class="dash-card-sub-title">
-      Next Sprint: {{ contract.nextSprint }}
+      Next Sprint:
+    </p>
+    <p>
+      {{ contract.nextSprint }}
     </p>
   </div>
   <div class="clr-col-6 dash-card-content">
@@ -10,7 +13,7 @@
     <a href="/">Sprint</a>
     <a href="/">Trello</a>
   </div>
-  <div class="clr-col-2 dash-card-info">
+  <div class="clr-col-2 dash-card-info dash-card-side">
     <img [src]="contract.imgSrc" />
   </div>
 </div>

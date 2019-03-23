@@ -1,22 +1,25 @@
-<div class="clr-row dash-card">
+<div class="clr-row dash-card openbids">
   <div class="clr-col-4 dash-card-title-section">
     <h4>{{ bid.title }}</h4>
     <p class="dash-card-sub-title">Your Bid: {{ formatMoney(bid.yourBid) }}<br />
-      Lowest Bid: {{ formatMoney(bid.lowestBid) }}
+      Low Bid: {{ formatMoney(bid.lowestBid) }}
     </p>
   </div>
   <div class="clr-col-6 dash-card-content">
-    <span class="dash-card-icon" (click)="cancel()">
+    <span class="dash-card-icon cancel" (click)="cancel()">
       <i class="fas fa-ban fa-5x"></i>
-      <br />Cancel
+      <br />
     </span>
-    <span class="dash-card-icon" (click)="modify()">
+    <span class="dash-card-icon modify" (click)="modify()">
       <i class="fas fa-cog fa-5x"></i>
-      <br />Modify
     </span>
+    <div class="dash-card-skills">
+      <h1>Skills:</h1>
+    </div>
   </div>
-  <div class="clr-col-2 dash-card-day">
+  <div class="clr-col-2 dash-card-day dash-card-side">
     <p class="dash-card-day-number">{{ bid.daysLeft }}</p>
-    <p>Days Left</p>
+    <p class="dash-card-day-label">Days</p>
+    <p class="dash-card-day-label-left"> Left</p>
   </div>
 </div>
