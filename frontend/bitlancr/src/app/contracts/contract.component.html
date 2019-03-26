@@ -1,0 +1,13 @@
+<div class="main-container" style="padding-top: 2.5rem">
+  <div class="content-container">
+    <div class="content-area content-box" *ngIf="loaded && contractData.open">
+      <contract-bid [isDeveloper]="isDeveloper" [contract]="contractData" [bids]="bids"></contract-bid>
+    </div>
+    <div class="content-area content-box" *ngIf="loaded && !contractData.open">
+      <p>{{ contractData.title }}: this contract is CLOOSSEEDDD...</p>
+    </div>
+    <div class="loading-box" *ngIf="!loaded">
+      <img src="assets/loading.svg" class="loading-image" title="loading screen" alt="loading screen" />
+    </div>
+  </div>
+</div>

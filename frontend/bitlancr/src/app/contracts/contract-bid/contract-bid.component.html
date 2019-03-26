@@ -1,0 +1,72 @@
+<div class="card">
+  <div class="card-block">
+    <div class="card-media-block wrap contract-block">
+      <img [src]="contract.imgUrl" class="card-media-image contract-picture">
+      <div class="card-media-description">
+        <span class="card-media-title contract-name">
+          {{ contract.title }}
+        </span>
+        <span class="card-media-text">
+          {{ contract.organization }}
+        </span>
+      </div>
+    </div>
+    <div class="contract-skills"><span class="label label-blue skill-label" *ngFor="let skill of contract.skills">{{ skill }}</span><br /></div>
+    <div class="card-text contract-text">
+      {{ contract.desc }}<br />
+      <clr-datagrid *ngIf="!isDeveloper && ownsBiz">
+        <clr-dg-column>First Name</clr-dg-column>
+        <clr-dg-column>Last Name</clr-dg-column>
+        <clr-dg-column>Bid Value</clr-dg-column>
+        <clr-dg-column>Date</clr-dg-column>
+
+        <clr-dg-row *ngFor="let bid of getBids()">
+          <clr-dg-cell>{{ bid.fname }}</clr-dg-cell>
+          <clr-dg-cell>{{ bid.lname }}</clr-dg-cell>
+          <clr-dg-cell>{{ formatMoney(bid.bidValue) }}</clr-dg-cell>
+          <clr-dg-cell>{{ bid.date }}</clr-dg-cell>
+        </clr-dg-row>
+
+        <clr-dg-footer>
+          <div style="text-align: left">
+            Average Bid: {{ formatMoney(contract.avgbid) }}&nbsp;
+            Lowest Bid: {{ formatMoney(contract.lowbid) }}&nbsp;
+            Number of Bids: {{ formatMoney(contract.numbids) }}&nbsp;
+          </div>
+          <clr-dg-pagination #pagination [(clrDgPage)]="pageIndex" [clrDgPageSize]="5" [clrDgTotalItems]="bids.length">
+            <clr-dg-page-size [clrPageSizeOptions]="[5,10,20,50,100]">Bids per page</clr-dg-page-size>
+            {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+            of {{pagination.totalItems}} bids
+          </clr-dg-pagination>
+        </clr-dg-footer>
+      </clr-datagrid>
+      <div>
+        <h3>Project Charter&nbsp;<a target="_blank" [href]="contract.charter"><i class="fas fa-external-link-alt fa-xs"></i></a></h3>
+        <clr-toggle-wrapper class="embed-toggle">
+          <input type="checkbox" clrToggle id="toggle-embed" value="embedded" name="embedded" [(ngModel)]="embedded" />
+          <label for="toggle-embed">Embedded View</label>
+        </clr-toggle-wrapper>
+        <div class="charter-container" *ngIf="isDeveloper && embedded">
+          <span style="display: flex; justify-content: center;">
+            <div class="pdf-nav-container">
+              <i class="fas fa-chevron-left pdf-nav-icon" (click)="changePage(true)"></i>
+              <form class="clr-form">
+                <input type="text" id="pdf-page-input" name="pdfPage" [(value)]="pdfPage" class="clr-input" [(ngModel)]="pdfPage">
+              </form>
+              <i class="fas fa-chevron-right pdf-nav-icon" style="right: 0px" (click)="changePage(false)"></i>
+            </div>
+          </span>
+          <pdf-viewer id="pdfViewer" class="pdf-container" [src]="contract.charter" [render-text]="true" [show-all]="false" [(page)]="pdfPage" style="display: block;"></pdf-viewer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer" *ngIf="!isDeveloper && ownsBiz">
+    <button class="btn btn-sm btn-link">Edit Contract</button>
+    <button class="btn btn-sm btn-link">Select Developer</button>
+  </div>
+  <div class="card-footer" *ngIf="isDeveloper">
+    <button class="btn btn-sm btn-link">Send Message</button>
+    <button class="btn btn-sm btn-link">Place Bid</button>
+  </div>
+</div>

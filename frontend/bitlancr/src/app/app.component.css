@@ -11,9 +11,27 @@
   margin-right: auto;
 }
 
+@media (max-width:1280px) {
+  .content-box {
+    padding-right: 4vw !important;
+    padding-left: 4vw !important;
+  }
+}
+
 .content-box {
   padding-right: 14vw !important;
   padding-left: 14vw !important;
+}
+
+.skill-label {
+  transition: all .2s ease-in-out;
+}
+
+.skill-label:hover {
+  background-color: #63d8ff;
+  color: #ffffff;
+  border: 1.5px solid #a7a7a77d;
+  transform: scale(1.1);
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -21,8 +39,9 @@
     padding-right: 1vw !important;
     padding-left: 1vw !important;
   }
+
   body {
-      width: 75%;
-      overflow-x: hidden;
+    width: 75%;
+    overflow-x: hidden;
   }
 }
