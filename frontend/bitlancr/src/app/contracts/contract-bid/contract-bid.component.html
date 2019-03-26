@@ -14,7 +14,7 @@
     <div class="contract-skills"><span class="label label-blue skill-label" *ngFor="let skill of contract.skills">{{ skill }}</span><br /></div>
     <div class="card-text contract-text">
       {{ contract.desc }}<br />
-      <clr-datagrid>
+      <clr-datagrid *ngIf="ownsBiz">
         <clr-dg-column>First Name</clr-dg-column>
         <clr-dg-column>Last Name</clr-dg-column>
         <clr-dg-column>Bid Value</clr-dg-column>
@@ -42,8 +42,8 @@
       </clr-datagrid>
     </div>
   </div>
-  <div class="card-footer">
-    <button class="btn btn-sm btn-link">Send Message</button>
-    <button class="btn btn-sm btn-link">Place Bid</button>
+  <div class="card-footer" *ngIf="ownsBiz">
+    <button class="btn btn-sm btn-link">Edit Contract</button>
+    <button class="btn btn-sm btn-link">Select Developer</button>
   </div>
 </div>

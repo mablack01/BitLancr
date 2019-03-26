@@ -13,7 +13,8 @@ export class ContractComponent implements OnInit {
 	mockData = [];
 	bids = [];
 	contractData = {};
-	isDeveloper = true;
+	ownsBiz = true;
+	isDeveloper = false;
 
 	constructor(private route: ActivatedRoute) {
 		this.loadContractData();

@@ -31,6 +31,7 @@ export class ContractBidComponent implements OnInit {
 		date: String()
 	}];
 
+	ownsBiz = true;
 	pageIndex = 1;
 
 	constructor() { }
