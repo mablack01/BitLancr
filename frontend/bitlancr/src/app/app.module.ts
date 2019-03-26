@@ -18,6 +18,8 @@ import { ActivityComponent } from './profile/activity/activity.component';
 import { ContractComponent } from './contracts/contract.component';
 import { ContractBidComponent } from './contracts/contract-bid/contract-bid.component';
 import { ErrorComponent } from './global/error/error.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
@@ -40,7 +42,9 @@ import { ErrorComponent } from './global/error/error.component';
 		BrowserModule,
 		AppRoutingModule,
 		ClarityModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		PdfViewerModule,
+		FormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

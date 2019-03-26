@@ -14,7 +14,7 @@ export class ContractComponent implements OnInit {
 	bids = [];
 	contractData = {};
 	ownsBiz = true;
-	isDeveloper = false;
+	isDeveloper = true;
 
 	constructor(private route: ActivatedRoute) {
 		this.loadContractData();
@@ -51,7 +51,7 @@ export class ContractComponent implements OnInit {
 			postdate: "03/01/19",
 			startdate: "03/21/19",
 			skills: ["html", "css"],
-			charter: "",
+			charter: "./../assets/charters/charter.pdf",
 			nextSprintDate: "04/15/19",
 			open: false,
 			trello: "",
@@ -71,7 +71,7 @@ export class ContractComponent implements OnInit {
 			postdate: "03/18/19",
 			startdate: "",
 			skills: ["flask", "sql"],
-			charter: "",
+			charter: "./../assets/charters/charter.pdf",
 			nextSprintDate: "04/15/19",
 			open: true,
 			trello: "",

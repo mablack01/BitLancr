@@ -14,7 +14,7 @@
     <div class="contract-skills"><span class="label label-blue skill-label" *ngFor="let skill of contract.skills">{{ skill }}</span><br /></div>
     <div class="card-text contract-text">
       {{ contract.desc }}<br />
-      <clr-datagrid *ngIf="ownsBiz">
+      <clr-datagrid *ngIf="!isDeveloper && ownsBiz">
         <clr-dg-column>First Name</clr-dg-column>
         <clr-dg-column>Last Name</clr-dg-column>
         <clr-dg-column>Bid Value</clr-dg-column>
@@ -40,10 +40,33 @@
           </clr-dg-pagination>
         </clr-dg-footer>
       </clr-datagrid>
+      <div>
+        <h3>Project Charter&nbsp;<a target="_blank" [href]="contract.charter"><i class="fas fa-external-link-alt fa-xs"></i></a></h3>
+        <clr-toggle-wrapper class="embed-toggle">
+          <input type="checkbox" clrToggle id="toggle-embed" value="embedded" name="embedded" [(ngModel)]="embedded" />
+          <label for="toggle-embed">Embedded View</label>
+        </clr-toggle-wrapper>
+        <div class="charter-container" *ngIf="isDeveloper && embedded">
+          <span style="display: flex; justify-content: center;">
+            <div class="pdf-nav-container">
+              <i class="fas fa-chevron-left pdf-nav-icon" (click)="changePage(true)"></i>
+              <form class="clr-form">
+                <input type="text" id="pdf-page-input" name="pdfPage" [(value)]="pdfPage" class="clr-input" [(ngModel)]="pdfPage">
+              </form>
+              <i class="fas fa-chevron-right pdf-nav-icon" style="right: 0px" (click)="changePage(false)"></i>
+            </div>
+          </span>
+          <pdf-viewer id="pdfViewer" class="pdf-container" [src]="contract.charter" [render-text]="true" [show-all]="false" [(page)]="pdfPage" style="display: block;"></pdf-viewer>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card-footer" *ngIf="ownsBiz">
+  <div class="card-footer" *ngIf="!isDeveloper && ownsBiz">
     <button class="btn btn-sm btn-link">Edit Contract</button>
     <button class="btn btn-sm btn-link">Select Developer</button>
+  </div>
+  <div class="card-footer" *ngIf="isDeveloper">
+    <button class="btn btn-sm btn-link">Send Message</button>
+    <button class="btn btn-sm btn-link">Place Bid</button>
   </div>
 </div>

@@ -17,6 +17,7 @@ export class ContractBidComponent implements OnInit {
 		postdate: String(),
 		startdate: String(),
 		skills: [],
+		charter: String(),
 		open: Boolean(),
 		desc: String(),
 		title: String(),
@@ -31,7 +32,10 @@ export class ContractBidComponent implements OnInit {
 		date: String()
 	}];
 
+	@Input() isDeveloper;
 	ownsBiz = true;
+	embedded = true;
+	pdfPage = 1;
 	pageIndex = 1;
 
 	constructor() { }
@@ -46,6 +50,19 @@ export class ContractBidComponent implements OnInit {
 	getBids() {
 		//let newBids = this.bids.slice(((this.pagination.currentPage - 1) * this.pagination.pageSize) + this.pagination.firstItem);
 		return this.bids;
+	}
+
+	changePage(decrease: Boolean) {
+		if (decrease) {
+			if (this.pdfPage <= 1) {
+				this.pdfPage = 1;
+			} else {
+				this.pdfPage--;
+			}
+		} else {
+			this.pdfPage++;
+		}
+		document.getElementById('pdfViewer').click();
 	}
 
 }

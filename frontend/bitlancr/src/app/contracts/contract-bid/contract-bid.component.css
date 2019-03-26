@@ -28,3 +28,36 @@
   padding-left: 6vw;
   padding-right: 6vw;
 }
+
+.pdf-container {
+  border-width: 1.5px;
+  border-style: solid;
+  margin-top: 25px;
+}
+
+#pdf-page-input {
+  width: 0.5px;
+  text-align: center;
+}
+
+.embed-toggle {
+  margin-top: 20px;
+}
+
+.charter-container {}
+
+.pdf-nav-container {
+  position: relative;
+}
+
+.pdf-nav-icon {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.pdf-nav-icon:hover {
+  color: #55b7d6;
+}
