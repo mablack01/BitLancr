@@ -22,10 +22,13 @@ export class BidPreviewComponent implements OnInit {
 
 	cancel() {
 		alert("You have canceled bid " + this.bid.title + ".");
+
 	}
 
 	modify() {
+		console.log('ayooo');
 		alert("You have modified bid " + this.bid.title + ".");
+		console.log('and again');
 	}
 
 	formatMoney(n: Number) {

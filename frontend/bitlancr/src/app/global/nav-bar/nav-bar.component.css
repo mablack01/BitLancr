@@ -1,4 +1,9 @@
+.branding {
+  background-color: #55b7d6;
+}
+
 .header {
+  background-color: #499bb5;
   position: fixed;
   top: 0;
   width: 100%;
@@ -15,9 +20,15 @@
   font-weight: 600 !important;
 }
 
-.nav-item {
+a.nav-item {
   width: auto !important;
   padding-left: 12px;
+  transition: all .1s ease-in-out;
+}
+
+a.nav-item:hover {
+  color: white;
+  transform: scale(1.05);
 }
 
 #search_input {

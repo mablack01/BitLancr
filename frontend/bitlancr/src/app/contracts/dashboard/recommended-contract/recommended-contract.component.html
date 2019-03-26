@@ -1,4 +1,4 @@
-<div class="clr-row" *ngFor="let row of contracts">
+<div class="clr-row horizonscroll" *ngFor="let row of contracts">
   <div class="clr-col-md-3" *ngFor="let contract of row?.data">
     <div class="card recommended-card">
       <div class="card-img recommended-logo">
@@ -7,7 +7,7 @@
       <div class="card-block">
         <h4 class="card-title">{{ contract.title }}</h4>
         <p class="card-text recommended-text">
-          Average Bid: {{ formatMoney(contract.avgBid) }}<br />
+          Avg. Bid: {{ formatMoney(contract.avgBid) }}<br />
           Skills: <span *ngFor="let skill of contract.skills"><img class="recommended-skill" src="assets/skills/{{ skill }}.png" /></span>
         </p>
       </div>

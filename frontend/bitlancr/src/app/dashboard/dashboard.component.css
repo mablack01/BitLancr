@@ -1,30 +1,53 @@
-.dash-card {
-  border-radius: 15px;
-  border: 2px solid;
+ .dash-card {
+  min-height: 140px;
+  border: 2px #499bb5 solid;
+  border-radius: 5px;
   margin: 14px 12px;
   height: auto;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.horizonscroll{
+  min-height: 450px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .horizonscroll{
+    margin-left: 7.5vw;
+  }
+  .recommended-card{
+    width: 75vw;
+  }
 }
 
 .dash-card:hover {
   transform: scale(1.03);
 }
 
-.dash-card-icon {
-  display: inline-block;
-  text-align: center;
-}
-
-.dash-card-content {
-  border-right: 2px dashed;
+.contracts .dash-card-content {
   display: flex;
   justify-content: space-between;
 }
 
-@media (min-width:1025px) {
+.contracts .dash-card-content a {
+  height: 24px;
+  display: inline-grid;
+}
+
+.dash-card-skills h1{
+  font-size: 1.5vw;
+  display: block;
+  margin-top: -.25vw;
+}
+
+@media (min-width:1080px) {
   .dash-card-content {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: .75vw;
+    padding-left: 1vw;
+    padding-right: 4vw;
   }
 }
 
@@ -34,12 +57,17 @@
 }
 
 .dash-card-title-section {
-  border-right: 2px dashed;
-  text-align: center;
+  background-color: #55b7d6;
+  text-align: left;
+  border-right: 2px solid #499bb5;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding-left: 1vw;
+  padding-top: 1vw;
 }
 
 .dash-card-sub-title {
-  margin-top: 6px;
+  margin-top: 1vw;
   margin-bottom: 10px;
 }
 
@@ -51,8 +79,41 @@
   max-height: 100%;
 }
 
+@media (max-width:1080px) {
+  .dash-card-side {
+    display: none;
+  }
+}
+
+.clr-row.dash-card{
+  border-color: #499bb5;
+  box-shadow: 0px 0px 12px #888888;
+}
+
+.dash-card-title-section h4 {
+  color: white;
+  margin-top: 0.5vw;
+}
+
+.dash-card-title-section p {
+  margin-top: 1vw;
+  margin-bottom: -.5vw;
+  color: white;
+}
+
+.clr-col-2.dash-card-day p {
+  color: rgb(99, 99, 99);
+}
+
 .recommended-card {
   margin: 14px 12px;
+  box-shadow: 0px 0px 12px #888888;
+  transition: all .1s ease-in-out;
+  flex: 0 0 auto;
+}
+
+.recommended-card:hover{
+  transform: scale(1.03);
 }
 
 .recommended-title {
@@ -90,4 +151,111 @@
 
 .scroll-icon:hover {
   color: #002538;
+  border-radius: 15px;
+  border: 2px solid;
+  margin: 14px 12px;
+  height: auto;
+  transition: all .1s ease-in-out;
+ }
+
+ .dash-card:hover {
+   transform: scale(1.03);
+ }
+
+ .dash-card-content.contracts {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .dash-card-content.contracts a {
+   height: 24px;
+   display: inline-grid;
+ }
+
+ .openbids .dash-card-content {
+   display: grid;
+   padding-top: 1.5vw;
+ }
+
+ @media (min-width:1080px) {
+   .dash-card-content {
+     border-right: 2px #499bb5 solid;
+     padding-top: .75vw;
+     padding-left: 1vw;
+     padding-right: 4vw;
+   }
+ }
+
+ .dash-card-info {
+   padding-left: 0px;
+   padding-right: 0px;
+ }
+
+
+
+ .dash-card-info>img {
+   border-left: 2px solid;
+   border-radius: 0px 13px 13px 0px;
+   object-fit: cover;
+   width: 100%;
+   max-height: 100%;
+ }
+
+ .clr-col-2.dash-card-day p {
+   color: rgb(99, 99, 99);
+ }
+
+ .recommended-card {
+   margin: 14px 12px;
+   display: inline-block;
+ }
+
+.recommended-card h4{
+  color: black;
 }
+
+.recommended-card p{
+  color: black;
+}
+
+ .recommended-title {
+   position: absolute;
+   top: 0px;
+   left: 16px;
+   font-weight: bolder;
+   color: #002538;
+ }
+
+ .recommended-logo>img {
+   object-fit: cover;
+   width: 100%;
+   max-height: 100%;
+ }
+
+ .recommended-text {
+   font-size: 0.7rem;
+ }
+
+ .recommended-skill {
+   max-width: 30px;
+   max-height: 30px;
+   padding-right: 5px;
+ }
+
+ .scroll-section {
+   position: relative;
+ }
+
+ .scroll-icon {
+   position: absolute;
+   top: 40%;
+ }
+
+ .scroll-icon:hover {
+   color: #002538;
+ }
+
+
+ .dash-card-day-label-left{
+   margin-top: -.5vw;
+ }
